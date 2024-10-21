@@ -39,7 +39,7 @@ enum Controls {
   ResourceAutorefreshInterval = 'resourceAutorefreshInterval',
   DisableAccessDeniedNotification = 'disableAccessDeniedNotification',
   NamespaceSettings = 'namespaceSettings',
-  HideAllNamespaces = 'hideAllNamespaces'
+  HideAllNamespaces = 'hideAllNamespaces',
 }
 
 @Component({
@@ -182,9 +182,7 @@ export class GlobalSettingsComponent implements OnInit {
     this.form
       .get(Controls.DisableAccessDeniedNotification)
       .setValue(this.settings.disableAccessDeniedNotifications, {emitEvent: false});
-    this.form
-      .get(Controls.HideAllNamespaces)
-      .setValue(this.settings.hideAllNamespaces, {emitEvent: false});
+    this.form.get(Controls.HideAllNamespaces).setValue(this.settings.hideAllNamespaces, {emitEvent: false});
   }
 
   private onLoadError_(): void {

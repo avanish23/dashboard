@@ -132,7 +132,7 @@ export class GlobalSettingsService {
   }
 
   getHideAllNamespaces(): boolean {
-    return this.settings_.hideAllNamespaces
+    return this.settings_.hideAllNamespaces;
   }
 
   getDefaultNamespace(): string {
